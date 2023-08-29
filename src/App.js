@@ -2,6 +2,7 @@ import './App.css'
 import { Sidenav, Nav, Toggle } from 'rsuite';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import { useState } from "react"
+import { partOne } from "./data"
 
 
 function App() {
