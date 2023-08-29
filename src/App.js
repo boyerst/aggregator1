@@ -5,10 +5,14 @@ import { useState } from "react"
 import { partOne } from "./data"
 
 
+
+
 function App() {
 
   const [expanded, setExpanded] = useState(true);
   const [activeKey, setActiveKey] = useState('1');
+
+
 
   return (
          // <code>App Name</code>
@@ -19,7 +23,13 @@ function App() {
         <Sidenav.Body>
           <Nav activeKey={activeKey} onSelect={setActiveKey}>
             <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<MagicIcon />}>
-              <Nav.Item>Item</Nav.Item>
+
+              {partOne.map((item, index) => {
+                return (
+                  <Nav.Item key={index}>{item.title}</Nav.Item>
+                )
+              })}
+
             </Nav.Menu>
           </Nav>
         </Sidenav.Body>
@@ -30,3 +40,5 @@ function App() {
 }
 
 export default App;
+
+
