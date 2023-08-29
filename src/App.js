@@ -2,7 +2,7 @@ import './App.css'
 import { Sidenav, Nav, Toggle } from 'rsuite';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import { useState } from "react"
-import { partOne } from "./data"
+import { seriesPartOne } from "./data"
 
 
 
@@ -24,9 +24,9 @@ function App() {
           <Nav activeKey={activeKey} onSelect={setActiveKey}>
             <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<MagicIcon />}>
 
-              {partOne.map((item, index) => {
+              {seriesPartOne.map((part, index) => {
                 return (
-                  <Nav.Item key={index}>{item.title}</Nav.Item>
+                  <Nav.Item key={index}>{part.title}</Nav.Item>
                 )
               })}
 

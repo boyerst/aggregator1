@@ -1,5 +1,5 @@
 
-export const partOne = [
+export const seriesPartOne = [
     // used as 'key' in App.js Menu items
     {
       title: "Part One",
