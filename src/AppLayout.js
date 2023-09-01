@@ -1,5 +1,5 @@
 import './App.css'
-import { Sidenav, Nav, Toggle } from 'rsuite';
+import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle } from 'rsuite';
 import PageIcon from '@rsuite/icons/Page';
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate } from 'react-router-dom';
@@ -24,28 +24,37 @@ function AppLayout() {
 
     <>
       <div style={{ width: 240, padding: 10 }}>
+        <Container>
+          <Sidebar
+            style={{ display: 'flex', flexDirection: 'column' }}
+            // width={expand ? 260 : 56}
+            collapsible
+          >
+            <hr />
+            <Sidenav expanded={expanded}>
+              <Sidenav.Body>
+                <Nav activeKey={activeKey} onSelect={setActiveKey}>
+                  <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
 
-        <hr />
-        <Sidenav expanded={expanded}>
-          <Sidenav.Body>
-            <Nav activeKey={activeKey} onSelect={setActiveKey}>
-              <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
-
-                {seriesPartOne.map((part, index) => {
-                  return (
-                      <Nav.Item href="/parts" eventKey={index} key={index}>{part.title}</Nav.Item>
-                  )
-                })}
-              </Nav.Menu>
-            </Nav>
-          </Sidenav.Body>
-          <Sidenav.Toggle expanded={expanded} onToggle={expanded => setExpanded(expanded)} />
-        </Sidenav>
+                    {seriesPartOne.map((part, index) => {
+                      return (
+                          <Nav.Item href="/parts" eventKey={index} key={index}>{part.title}</Nav.Item>
+                      )
+                    })}
+                  </Nav.Menu>
+                </Nav>
+              </Sidenav.Body>
+              <Sidenav.Toggle expanded={expanded} onToggle={expanded => setExpanded(expanded)} />
+            </Sidenav>
+          </Sidebar>
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="/parts" element={<Parts />}/>
+            </Routes>
+          </Container>
+        </Container>
       </div>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/parts" element={<Parts />}/>
-      </Routes>
 
     </>
 
