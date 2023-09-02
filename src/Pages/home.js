@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div>
-      <h2>home.js</h2>
+      <h4>home.js</h4>
 
     </div>
   )

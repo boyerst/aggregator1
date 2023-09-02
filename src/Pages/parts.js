@@ -19,7 +19,7 @@ function Parts() {
 
   return (
     <div>
-      <h2>parts.js</h2>
+      <h4>parts.js</h4>
       {/*<h3>{title}</h3>*/}
       {/*<Iframe class="rumble" width="640" height="360" src="https://rumble.com/embed/vsk5rv/?pub=4&start=5338" frameborder="0" allowfullscreen />*/}
       {/*<Iframe class="rumble" width="640" height="360" src={rumble} frameborder="0" allowfullscreen />  */}

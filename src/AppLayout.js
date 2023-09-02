@@ -31,6 +31,13 @@ function AppLayout() {
             width={expanded ? 260 : 56}
             collapsible
           >
+          <Sidenav.Header>
+            <div className="header-styles">
+              <span> 
+                { expanded ? "App Title" : "T" }
+              </span>
+            </div>
+          </Sidenav.Header>
             <hr />
             <Sidenav expanded={expanded} appearance="subtle">
               <Sidenav.Body>
@@ -48,12 +55,11 @@ function AppLayout() {
               <Sidenav.Toggle expanded={expanded} onToggle={expanded => setExpanded(expanded)} />
             </Sidenav>
           </Sidebar>
-          <Container className="page-container">
+          <Container >
             <Header>
               <h2 className="header">Page Title</h2>
             </Header>
             <Content>
-              
               <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/parts" element={<Parts />}/>

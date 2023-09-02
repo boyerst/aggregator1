@@ -2,53 +2,31 @@
 
 .App {
 /*  text-align: center;*/
-
 }
-
 
 .div {
   margin-left: 14px;
 }
 
-.header {
-  white-space: no wrap;
-  white-space: inherit;
-}
-
-.page-container {
-  margin: 15px;
-  display: inline-block;
-  
-}
-
 .rs-container {
+  margin: 15px;
 
+}
+
+.rs-content {
+  margin: 18px;
 }
 
 .rs-sidebar {
-
 
 }
 
 .rs-sidenav {
 
-
-
 }
-/*.rs-sidenav-collapse-in {
-  overflow-y: auto;
-}
-*/
-/*
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-*/
 
+.rs-sidenav-header {
+  text-align: center;
+
+  
+}
