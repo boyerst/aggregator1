@@ -4,13 +4,7 @@ import AppLayout from './AppLayout'
 
 
 
-
-
-
 function App() {
-
-
-
 
   return (
          // <code>App Name</code>

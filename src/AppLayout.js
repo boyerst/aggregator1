@@ -1,8 +1,8 @@
 import './App.css'
-import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle } from 'rsuite';
-import PageIcon from '@rsuite/icons/Page';
+import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle } from 'rsuite'
+import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate } from 'react-router-dom'
 import { seriesPartOne } from "./data"
 import Parts from "./Pages/parts"
 import Home from "./Pages/home"
@@ -13,8 +13,9 @@ import Home from "./Pages/home"
 
 function AppLayout() {
 
-  const [expanded, setExpanded] = useState(true);
-  const [activeKey, setActiveKey] = useState('1');
+  const [expanded, setExpanded] = useState(true)
+  const [activeKey, setActiveKey] = useState('1')
+  const [expand, setExpand] = useState(true)
 
 
 
@@ -23,15 +24,15 @@ function AppLayout() {
 
 
     <>
-      <div style={{ width: 240, padding: 10 }}>
+      <div>
         <Container>
           <Sidebar
             style={{ display: 'flex', flexDirection: 'column' }}
-            // width={expand ? 260 : 56}
+            width={expanded ? 260 : 56}
             collapsible
           >
             <hr />
-            <Sidenav expanded={expanded}>
+            <Sidenav expanded={expanded} appearance="subtle">
               <Sidenav.Body>
                 <Nav activeKey={activeKey} onSelect={setActiveKey}>
                   <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
@@ -47,11 +48,17 @@ function AppLayout() {
               <Sidenav.Toggle expanded={expanded} onToggle={expanded => setExpanded(expanded)} />
             </Sidenav>
           </Sidebar>
-          <Container>
-            <Routes>
-              <Route path="/" element={<Home />}/>
-              <Route path="/parts" element={<Parts />}/>
-            </Routes>
+          <Container className="page-container">
+            <Header>
+              <h2 className="header">Page Title</h2>
+            </Header>
+            <Content>
+              
+              <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/parts" element={<Parts />}/>
+              </Routes>
+            </Content>
           </Container>
         </Container>
       </div>

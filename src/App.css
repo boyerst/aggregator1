@@ -6,6 +6,39 @@
 }
 
 
+.div {
+  margin-left: 14px;
+}
+
+.header {
+  white-space: no wrap;
+  white-space: inherit;
+}
+
+.page-container {
+  margin: 15px;
+  display: inline-block;
+  
+}
+
+.rs-container {
+
+}
+
+.rs-sidebar {
+
+
+}
+
+.rs-sidenav {
+
+
+
+}
+/*.rs-sidenav-collapse-in {
+  overflow-y: auto;
+}
+*/
 /*
 .App-header {
   background-color: #282c34;
