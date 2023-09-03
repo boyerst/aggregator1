@@ -10,6 +10,15 @@ import Home from "./Pages/home"
 
 
 
+const headerStyle = {
+  padding: 18,
+  fontSize: 16,
+  height: 56,
+  // backgroundColor: '#34c3ff',
+  // color: ' #fff',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden'
+}
 
 function AppLayout() {
 
@@ -32,7 +41,7 @@ function AppLayout() {
             collapsible
           >
           <Sidenav.Header>
-            <div className="header-styles">
+            <div style={headerStyle}>
               <span> 
                 { expanded ? "App Title" : "T" }
               </span>
