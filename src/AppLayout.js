@@ -62,9 +62,9 @@ function AppLayout() {
                     })}*/}
                     {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                       return (
-                        <li key={slug}>
-                          <Nav.Item href={slug} eventKey={slug}>{title}</Nav.Item>
-                        </li>  
+                      
+                          <Nav.Item href={slug} key={slug} eventKey={slug}>{title}</Nav.Item>
+                        
                       )
                     })}
                   </Nav.Menu>
@@ -80,7 +80,7 @@ function AppLayout() {
             <Content>
               <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/parts" element={<Parts />}/>
+                <Route path=":slug" element={<Parts />}/>
               </Routes>
             </Content>
           </Container>
