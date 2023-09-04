@@ -12,7 +12,7 @@ import Home from "./Pages/home"
 
 const headerStyle = {
   padding: 18,
-  fontSize: 16,
+  fontSize: 28,
   height: 56,
   // backgroundColor: '#34c3ff',
   // color: ' #fff',
@@ -43,7 +43,9 @@ function AppLayout() {
           <Sidenav.Header>
             <div style={headerStyle}>
               <span> 
-                { expanded ? "App Title" : "T" }
+                <code>
+                  { expanded ? "App Title" : "T" }
+                </code>
               </span>
             </div>
           </Sidenav.Header>
@@ -53,9 +55,16 @@ function AppLayout() {
                 <Nav activeKey={activeKey} onSelect={setActiveKey}>
                   <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
 
-                    {seriesPartOne.map((part, index) => {
+      {/*              {seriesPartOne.map((part, index) => {
                       return (
                           <Nav.Item href="/parts" eventKey={index} key={index}>{part.title}</Nav.Item>
+                      )
+                    })}*/}
+                    {Object.entries(seriesPartOne).map(([slug, { title }]) => {
+                      return (
+                        <li key={slug}>
+                          <Nav.Item href={slug} eventKey={slug}>{title}</Nav.Item>
+                        </li>  
                       )
                     })}
                   </Nav.Menu>
