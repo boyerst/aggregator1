@@ -2,7 +2,7 @@ import './App.css'
 import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle } from 'rsuite'
 import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
 import { seriesPartOne } from "./data"
 import Parts from "./Pages/parts"
 import Home from "./Pages/home"
@@ -20,11 +20,16 @@ const headerStyle = {
   overflow: 'hidden'
 }
 
+
+
+
+
 function AppLayout() {
 
   const [expanded, setExpanded] = useState(true)
   const [activeKey, setActiveKey] = useState('1')
-  const [expand, setExpand] = useState(true)
+  const [expandSidenav, setExpandSidenav] = useState(true)
+
 
 
 
@@ -55,18 +60,25 @@ function AppLayout() {
                 <Nav activeKey={activeKey} onSelect={setActiveKey}>
                   <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
 
-      {/*              {seriesPartOne.map((part, index) => {
+{/*                    {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                       return (
-                          <Nav.Item href="/parts" eventKey={index} key={index}>{part.title}</Nav.Item>
+                        <Nav.Item key={slug} eventKey={slug}>
+                          <Link to={`${slug}`} >{title}</Link>
+                        </Nav.Item>
                       )
                     })}*/}
                     {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                       return (
-                      
-                          <Nav.Item href={slug} key={slug} eventKey={slug}>{title}</Nav.Item>
-                        
+                        <Nav.Item as={Link} to={`${slug}`} key={slug} eventKey={slug}>
+                          {title}
+                        </Nav.Item>
                       )
                     })}
+{/*                    {Object.entries(seriesPartOne).map(([slug, { title }]) => {
+                      return (
+                        <Nav.Item href={slug} key={slug} eventKey={slug}>{title}</Nav.Item>
+                      )
+                    })}*/}
                   </Nav.Menu>
                 </Nav>
               </Sidenav.Body>
@@ -75,7 +87,7 @@ function AppLayout() {
           </Sidebar>
           <Container >
             <Header>
-              <h2 className="header">Page Title</h2>
+              <h2 className="header">Part Title or App Title?</h2>
             </Header>
             <Content>
               <Routes>

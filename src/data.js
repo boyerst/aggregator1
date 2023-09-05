@@ -41,5 +41,5 @@ export const seriesPartOne = {
       title: "Part Three",
       rumble: "reactrouter.com",
       substack: "reactrouter.com"
-  }
+  },
 };

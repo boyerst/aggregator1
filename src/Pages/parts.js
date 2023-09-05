@@ -14,8 +14,8 @@ function Parts() {
   const { slug } = useParams()
   const part = seriesPartOne[slug]
 
-
   const { title, rumble } = part
+
 
   return (
     <div>
