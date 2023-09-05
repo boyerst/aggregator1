@@ -37,7 +37,7 @@ export const seriesPartOne = {
       rumble: "reactrouter.com",
       substack: "reactrouter.com"
   },
-  "part-three:": {
+  "part-three": {
       title: "Part Three",
       rumble: "reactrouter.com",
       substack: "reactrouter.com"

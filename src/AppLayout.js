@@ -31,7 +31,8 @@ function AppLayout() {
   const [expandSidenav, setExpandSidenav] = useState(true)
 
 
-
+  console.log(window.location.protocol)
+  
 
   return (
          // <code>App Name</code>
