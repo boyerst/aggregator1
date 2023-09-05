@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { Header} from 'rsuite'
 import "../App.css"
 import { seriesPartOne } from "../data"
-// import Iframe from 'react-iframe'
+import Iframe from 'react-iframe'
 
 
 function Parts() {
@@ -16,7 +16,7 @@ function Parts() {
   const part = seriesPartOne[slug]
   console.log("part: ", part)
 
-  const { title, rumble } = part
+  const { title, rumble, substack } = part
 
 
   return (
@@ -29,9 +29,8 @@ function Parts() {
             <li>{title}</li>
           </ul>
       })}*/}
-      <h4>{rumble}</h4>
-      <h4>parts.js</h4>
-      {/*<h3>{title}</h3>*/}
+      <Iframe class="rumble" width="640" height="360" src={rumble} frameborder="0" allowfullscreen />  
+      <h4>{substack}</h4>
       {/*<Iframe class="rumble" width="640" height="360" src="https://rumble.com/embed/vsk5rv/?pub=4&start=5338" frameborder="0" allowfullscreen />*/}
       {/*<Iframe class="rumble" width="640" height="360" src={rumble} frameborder="0" allowfullscreen />  */}
     </div>
