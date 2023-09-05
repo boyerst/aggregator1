@@ -31,8 +31,12 @@ function AppLayout() {
   const [expandSidenav, setExpandSidenav] = useState(true)
 
 
-  console.log(window.location.protocol)
-  
+  const { slug } = useParams()
+  console.log("slug: ", slug )
+  // const part = seriesPartOne[slug]
+  // console.log("part: ", part)
+
+
 
   return (
          // <code>App Name</code>
@@ -60,14 +64,6 @@ function AppLayout() {
               <Sidenav.Body>
                 <Nav activeKey={activeKey} onSelect={setActiveKey}>
                   <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
-
-{/*                    {Object.entries(seriesPartOne).map(([slug, { title }]) => {
-                      return (
-                        <Nav.Item key={slug} eventKey={slug}>
-                          <Link to={`${slug}`} >{title}</Link>
-                        </Nav.Item>
-                      )
-                    })}*/}
                     {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                       return (
                         <Nav.Item as={Link} to={`${slug}`} key={slug} eventKey={slug}>
@@ -75,11 +71,6 @@ function AppLayout() {
                         </Nav.Item>
                       )
                     })}
-{/*                    {Object.entries(seriesPartOne).map(([slug, { title }]) => {
-                      return (
-                        <Nav.Item href={slug} key={slug} eventKey={slug}>{title}</Nav.Item>
-                      )
-                    })}*/}
                   </Nav.Menu>
                 </Nav>
               </Sidenav.Body>
@@ -87,9 +78,9 @@ function AppLayout() {
             </Sidenav>
           </Sidebar>
           <Container >
-            <Header>
+{/*            <Header>
               <h2 className="header">Part Title or App Title?</h2>
-            </Header>
+            </Header>*/}
             <Content>
               <Routes>
                 <Route path="/" element={<Home />}/>
