@@ -24,15 +24,13 @@ function Parts() {
       <Header>
         <h2 className="header">{title}</h2>
       </Header>
-{/*      {Object.entries(seriesPartOne).map(([slug, {title}]) => {
-          <ul key={slug}>
-            <li>{title}</li>
-          </ul>
-      })}*/}
-      <Iframe class="rumble" width="640" height="360" src={rumble} frameborder="0" allowfullscreen />  
-      <h4>{substack}</h4>
-      {/*<Iframe class="rumble" width="640" height="360" src="https://rumble.com/embed/vsk5rv/?pub=4&start=5338" frameborder="0" allowfullscreen />*/}
-      {/*<Iframe class="rumble" width="640" height="360" src={rumble} frameborder="0" allowfullscreen />  */}
+   
+      <h4><a href={`${substack}`}>SubStack: {title}</a></h4>
+      <iframe src="https://prussiagate.substack.com/embed" width="640" height="260"></iframe>
+     
+      <h4><a href={`${rumble}`}>Rumble: {title}</a></h4>
+      <Iframe className="iFrame" src={rumble} width="640" height="360" allowfullscreen />  
+
     </div>
   )
 }
