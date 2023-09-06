@@ -4,8 +4,8 @@ import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
 import { seriesPartOne } from "./data"
-import Parts from "./Pages/parts"
-import About from "./Pages/about"
+import Parts from "./pages/parts"
+import About from "./pages/about"
 
 
 
