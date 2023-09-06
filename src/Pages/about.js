@@ -3,15 +3,15 @@ import "../App.css"
 
 
 
-function Home() {
+function About() {
 
 
   return (
     <div>
-      <h4>home.js</h4>
+      <h4>about.js</h4>
 
     </div>
   )
 }
 
-export default Home
+export default About

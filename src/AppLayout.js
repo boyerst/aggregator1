@@ -5,7 +5,7 @@ import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
 import { seriesPartOne } from "./data"
 import Parts from "./Pages/parts"
-import Home from "./Pages/home"
+import About from "./Pages/about"
 
 
 
@@ -63,6 +63,7 @@ function AppLayout() {
             <Sidenav expanded={expanded} appearance="subtle">
               <Sidenav.Body>
                 <Nav activeKey={activeKey} onSelect={setActiveKey}>
+                  <Nav.Item as={Link} to='/'>About</Nav.Item>
                   <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
                     {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                       return (
@@ -83,7 +84,7 @@ function AppLayout() {
             </Header>*/}
             <Content>
               <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<About />}/>
                 <Route path=":slug" element={<Parts />}/>
               </Routes>
             </Content>
