@@ -20,26 +20,22 @@ function Parts() {
 
 
   return (
-    <div>
+    <div className="partsDiv">
       <Header>
         <h2 className="header">{title}</h2>
       </Header>
-   
-      <h4>
+      <h4 className="partsContent">
         <a className="links" href={`${substack}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           SubStack: {title}
         </a>
       </h4>
-      <iframe src="https://prussiagate.substack.com/embed" width="640" height="260"></iframe>
-     
-      <h4>
+      <iframe src="https://prussiagate.substack.com/embed" width="840" height="260"></iframe>
+      <h4 className="partsContent">
         <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           Rumble: {title}
         </a>
       </h4>
-      <Iframe className="iFrame" src={rumble} width="640" height="360" allowfullscreen/>  
-
-
+      <Iframe className="iFrame" src={rumble} width="840" height="472" allowfullscreen/>  
     </div>
   )
 }

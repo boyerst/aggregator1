@@ -54,3 +54,11 @@
 .links:visited {
   color: inherit;
 }
+
+.partsDiv {
+  text-align: center;
+}
+
+.partsContent {
+  margin: 50px;
+}
