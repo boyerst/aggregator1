@@ -6,18 +6,20 @@ import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, usePara
 import { seriesPartOne } from "./data"
 import Parts from "./pages/parts"
 import About from "./pages/about"
+import Prussia from "./assets/prussiagate.jpeg"
 
 
 
 
 const headerStyle = {
-  padding: 18,
+  paddingTop: 15,
+  paddingLeft: 15,
   fontSize: 28,
-  height: 56,
+  height: 200,
   // backgroundColor: '#34c3ff',
   // color: ' #fff',
   whiteSpace: 'nowrap',
-  overflow: 'hidden'
+  // overflow: 'hidden'
 }
 
 
@@ -54,7 +56,13 @@ function AppLayout() {
             <div style={headerStyle}>
               <span> 
                 <code>
-                  { expanded ? "App Title" : "T" }
+    {/*              { expanded 
+                    ? "Prussia Gate" 
+                    : "T" }*/}
+                  { expanded 
+                    ? <div><img src={Prussia} alt="" style={{ marginRight: "10px" }} width="45px" height="55px"></img>Prussia Gate</div>
+                    : <img src={Prussia} alt="" width="45px" height="55px" /> 
+                  }
                 </code>
               </span>
             </div>
