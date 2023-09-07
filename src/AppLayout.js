@@ -14,6 +14,7 @@ import Prussia from "./assets/prussiagate.jpeg"
 const headerStyle = {
   paddingTop: 15,
   paddingLeft: 15,
+  marginBottom: 50,
   fontSize: 28,
   height: 80,
   // backgroundColor: '#34c3ff',
@@ -67,7 +68,7 @@ function AppLayout() {
                 </span>
               </div>
             </Sidenav.Header>
-            <hr />
+            {/*<hr />*/}
             <Sidenav expanded={expanded} appearance="subtle">
               <Animation.Bounce in={expanded}>
                 <Sidenav.Body>

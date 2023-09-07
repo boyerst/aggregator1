@@ -16,28 +16,31 @@ function About() {
 
 
   return (
-    <div style={{ margin: "100px 50px 50px 0px" }}>
+    <div style={{ margin: "100px 50px 50px 80px" }}>
       <h4>About The "Prussia Gate" series, written by Will Zoll...</h4>
       <div style={{textAlign: "center", marginTop: "50px", marginBottom: "50px"}}>
-        <h4>
-          "An invisible hand sits behind humanity, exerting control over the human will.
-        </h4>
-        <h4>
-          This hidden virus scours the earth, looking for hosts who will adopt its ideology, and wage war against dissenters.
-        </h4>
-        <h4>
-          You cannot leave a captivity that you cannot see."
-        </h4>
+        <i>
+          <h4>
+            "An invisible hand sits behind humanity, exerting control over the human will.
+          </h4>
+          <h4>
+            This hidden virus scours the earth, looking for hosts who will adopt its ideology, and wage war against dissenters.
+          </h4>
+          <h4>
+            You cannot leave a captivity that you cannot see."
+          </h4>
+        </i>
       </div>
       <h4 style={{ margin: "40px 0px 40px 0px" }}>
-        You will find each part of the series in the navigation menu. Included are links to the original piece and video of narration done by Patrick Gunnels on his show 'Reading Epic Threads'. 
+        Each part includes links to the original piece and narration done by Patrick Gunnels on his show 'Reading Epic Threads'. 
       </h4>
       <h4 style={{ margin: "0px 0px 40px 0px" }}>
         Please follow Will Zoll & Patrick Gunnels using the links provided below: 
       </h4>
       {/*<iframe src="https://prussiagate.substack.com/embed" width="640" height="260" ></iframe>*/}
-      <div style={{ marginBottom: "40px" }}>
-        <a href="https://prussiagate.substack.com/" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
+      <div className="subLinks">
+      
+        <a href="https://substack.com/@prussiagate" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           {/*<img src={Substack}  width="290px" height="50px" />*/}
           <Substack width="60px" height="60px" />
         </a>

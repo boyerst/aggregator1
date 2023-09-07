@@ -63,6 +63,14 @@
   margin: 50px;
 }
 
+.subLinks {
+  display: block;
+  text-align: center;
+}
+
+.subLinks a {
+  padding: 15px;
+}
 
 
 
