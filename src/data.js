@@ -34,12 +34,12 @@ export const seriesPartOne = {
   },
   "part-two": {
       title: "Part II",
-      rumble: "reactrouter.com",
+      rumble: "https://rumble.com/embed/vssnpm/?pub=4",
       substack: "reactrouter.com"
   },
   "part-three": {
       title: "Part III",
-      rumble: "reactrouter.com",
+      rumble: "https://rumble.com/embed/vt2ve5/?pub=4",
       substack: "reactrouter.com"
   },
 };

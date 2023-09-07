@@ -37,17 +37,17 @@ function About() {
       </h4>
       {/*<iframe src="https://prussiagate.substack.com/embed" width="640" height="260" ></iframe>*/}
       <div style={{ marginBottom: "40px" }}>
-        <a href="https://prussiagate.substack.com/" rel="noopener" rel="nofollow" target="_blank">
+        <a href="https://prussiagate.substack.com/" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           {/*<img src={Substack}  width="290px" height="50px" />*/}
           <Substack width="60px" height="60px" />
         </a>
    {/*   </div>
       <div> */}     
-        <a href="https://rumble.com/user/pgunnels" rel="noopener" rel="nofollow" target="_blank"> 
+        <a href="https://rumble.com/user/pgunnels" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank"> 
           {/*<Rumble width="290px" height="80px" />*/}
           <img src={Rumble2} alt="" width="95px" height="70px" style={{ marginBottom: "55px" }}/>
         </a>
-        <a href="https://twitter.com/pgunnels1" rel="noopener" rel="nofollow" target="_blank">
+        <a href="https://twitter.com/pgunnels1" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           <Twitter width="130px" height="130px" style={{ marginBottom: "-30px", marginLeft: "-30px" }}/>
         </a>
       </div>
