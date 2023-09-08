@@ -18,6 +18,7 @@ function About() {
   return (
     <div style={{ margin: "100px 50px 50px 80px" }}>
       <h4>About The "Prussia Gate" series, written by Will Zoll...</h4>
+      <h4>"Prussia Gate" is a continuing series written by Will Zoll & published on Substack</h4>
       <div style={{textAlign: "center", marginTop: "50px", marginBottom: "50px"}}>
         <i>
           <h4>
@@ -39,10 +40,10 @@ function About() {
       </h4>
       {/*<iframe src="https://prussiagate.substack.com/embed" width="640" height="260" ></iframe>*/}
       <div className="subLinks">
-      
+
         <a href="https://substack.com/@prussiagate" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
-          {/*<img src={Substack}  width="290px" height="50px" />*/}
-          <Substack width="60px" height="60px" />
+        
+          <Substack alt="ALT TEXT" width="60px" height="60px" />
         </a>
    {/*   </div>
       <div> */}     
