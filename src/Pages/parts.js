@@ -1,4 +1,4 @@
-import React from "react"
+import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { Header} from 'rsuite'
 import "../App.css"
@@ -19,6 +19,10 @@ function Parts() {
   const { title, rumble, substack } = part
 
 
+  function iframeError() {
+    document.getElementById("myFrame").src = "https://www.youtube.com/embed/7vYJipziT68?si=PFQLkFyXTELa-Z64"
+  }
+
   return (
     <div className="partsDiv">
       <Header>
@@ -29,7 +33,13 @@ function Parts() {
           SubStack: {title}
         </a>
       </h4>
-      <iframe src="https://prussiagate.substack.com/embed" width="840" height="260"></iframe>
+
+      <iframe 
+        id="myFrame"
+        onError={iframeError()}
+        className="iframe" src="https://prussiagate.substack.com/embed" width="840" height="260">
+      </iframe>
+
       <h4 className="partsContent">
         <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           Rumble: {title}
