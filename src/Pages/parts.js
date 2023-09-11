@@ -5,6 +5,7 @@ import "../App.css"
 import { seriesPartOne } from "../data"
 import Iframe from 'react-iframe'
 import Rumble2 from "../assets/rumble2.png"
+import { ImLink } from 'react-icons/im'
 
 
 function Parts() {
@@ -28,7 +29,8 @@ function Parts() {
     console.log("TIMESTAMP BEFORE: ", event.timeStamp)
     // if it takes more that 1 second to load, then call loadIframe to change it to true in order to display the iframe
       // this is because the valid embed links take longer than 1 second whilst the invalid links will take less than ~ 1 second to load (ie fail)
-    if (event.timeStamp > 1100) {
+    // if (event.timeStamp > 1100) {
+    if (event.timeStamp > 3000) {
       console.log("TIMESTAMP AFTER: ", event.timeStamp)
       loadIframe(true)
       console.log("🟢iframeLoad TOGGLED")
@@ -41,7 +43,11 @@ function Parts() {
       <Header>
         <h2 className="header">{title}</h2>
       </Header>
+  
+        
+
       <h4 className="partsContent">
+        <ImLink />
         <a className="links" href={`${substack}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           SubStack: {title}
         </a>
@@ -55,10 +61,17 @@ function Parts() {
             : ""
         }
          <iframe 
+            src="https://prussiagate.substack.com/embed" 
+            // src="https://www.youtube.com/embed/W8LlgS9YCP4?si=Dnwk-y-cq_bKWOha"
             id="myFrame"
             onLoad={iframeLoad}
+            // onLoad={iframeLoad((event) => {})}
+            // onLoad={event => iframeLoad(event)}
             // if iframeLoaded is false apply noiframe, else apply iframe
-            className={!iframeLoaded ? "noiframe" : "iframe"} src="https://prussiagate.substack.com/embed" width="840" height="260">
+            className={!iframeLoaded ? "noiframe" : "iframe"} 
+            title="Substack embed"
+            width="840" 
+            height="260">
           </iframe>
       </div>
 
