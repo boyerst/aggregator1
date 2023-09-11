@@ -30,7 +30,7 @@ const headerStyle = {
 function AppLayout() {
 
   const [expanded, setExpanded] = useState(true)
-  const [activeKey, setActiveKey] = useState('1')
+  const [activeKey, setActiveKey] = useState("1")
   const [expandSidenav, setExpandSidenav] = useState(true)
 
 
@@ -38,6 +38,7 @@ function AppLayout() {
   console.log("slug: ", slug )
   // const part = seriesPartOne[slug]
   // console.log("part: ", part)
+  console.log("activeKey: ", activeKey)
 
 
 
@@ -72,14 +73,13 @@ function AppLayout() {
             <Sidenav expanded={expanded} appearance="subtle">
               <Animation.Bounce in={expanded}>
                 <Sidenav.Body>
-                  <Nav activeKey={activeKey} onSelect={setActiveKey}>
-                    <Nav.Item as={Link} to='/'>About</Nav.Item>
+                  <Nav activeKey={activeKey} onSelect={setActiveKey} >
+                    <Nav.Item as={Link} to='/' eventKey="1" >About</Nav.Item>
                     <hr />
-                      
                     <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
                       {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                         return (
-                          <Nav.Item as={Link} to={`${slug}`} key={slug} eventKey={slug}>
+                          <Nav.Item as={Link} to={`${slug}`} key={slug} eventKey={slug} >
                             {title}
                           </Nav.Item>
                         )

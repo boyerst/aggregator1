@@ -23,6 +23,10 @@
 
 }
 
+.rs-icon {
+  color: inherit;
+}
+
 .header {
   text-align: center;
   
