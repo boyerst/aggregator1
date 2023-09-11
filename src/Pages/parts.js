@@ -47,7 +47,7 @@ function Parts() {
         
 
       <h4 className="partsContent">
-        <ImLink />
+        <ImLink className="ImLink" />
         <a className="links" href={`${substack}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           SubStack: {title}
         </a>
@@ -76,6 +76,7 @@ function Parts() {
       </div>
 
       <h4 className="partsContent">
+        <ImLink className="ImLink" />
         <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           Rumble: {title}
         </a>
