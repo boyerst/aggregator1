@@ -53,7 +53,7 @@ function AppLayout() {
             width={expanded ? 260 : 56}
             collapsible
           >
-          <Sidenav.Header>
+          <Sidenav.Header as={Link} to="/" className="homeNav">
               <div style={headerStyle}>
                 <span> 
                   <code>
