@@ -18,7 +18,7 @@ function About() {
 
   return (
     <div style={{ margin: "100px 50px 50px 80px" }}>
-      <h4>About The "Prussia Gate" series, written by Will Zoll...</h4>
+      {/*<h4>About The "Prussia Gate" series, written by Will Zoll...</h4>*/}
       <h4>"Prussia Gate" is a continuing series written by Will Zoll & published on Substack</h4>
       <div style={{textAlign: "center", marginTop: "50px", marginBottom: "50px"}}>
         <i>
@@ -37,7 +37,7 @@ function About() {
         Each part includes links to the original piece and narration done by Patrick Gunnels on his show 'Reading Epic Threads'. 
       </h4>
       <h4 style={{ margin: "0px 0px 40px 0px" }}>
-        Please follow Will Zoll & Patrick Gunnels using the links provided below: 
+        Please follow & support Will Zoll & Patrick Gunnels using the links provided below: 
       </h4>
       {/*<iframe src="https://prussiagate.substack.com/embed" width="640" height="260" ></iframe>*/}
       <div className="subLinks">
