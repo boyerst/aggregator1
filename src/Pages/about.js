@@ -1,8 +1,7 @@
 import React from "react"
 import "../App.css"
 import { seriesPartOne } from "../data"
-import { ReactComponent as Rumble } from "../assets/rumble1.svg"
-import Rumble2 from "../assets/rumble2.png"
+import Rumble from "../assets/rumble.png"
 import { ReactComponent as Substack } from "../assets/substack-icon.svg"
 import { ReactComponent as Twitter } from "../assets/twitter.svg"
 import { ImLink } from 'react-icons/im'
@@ -44,13 +43,13 @@ function About() {
 
         <a href="https://substack.com/@prussiagate" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
         
-          <Substack alt="ALT TEXT" width="60px" height="60px" />
+          <Substack alt="" width="60px" height="60px" />
         </a>
    {/*   </div>
       <div> */}     
         <a href="https://rumble.com/user/pgunnels" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank"> 
           {/*<Rumble width="290px" height="80px" />*/}
-          <img src={Rumble2} alt="" width="95px" height="70px" style={{ marginBottom: "55px" }}/>
+          <img src={Rumble} alt="" width="95px" height="70px" style={{ marginBottom: "55px" }}/>
         </a>
         <a href="https://twitter.com/pgunnels1" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
           <Twitter width="130px" height="130px" style={{ marginBottom: "-30px", marginLeft: "-30px" }}/>

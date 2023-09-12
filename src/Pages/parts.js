@@ -4,7 +4,8 @@ import { Header} from 'rsuite'
 import "../App.css"
 import { seriesPartOne } from "../data"
 import Iframe from 'react-iframe'
-import Rumble2 from "../assets/rumble2.png"
+import Rumble from "../assets/rumble.png"
+import { ReactComponent as Substack } from "../assets/substack-icon.svg"
 import { ImLink } from 'react-icons/im'
 
 
@@ -47,8 +48,10 @@ function Parts() {
         
 
       <h4 className="partsContent">
-        <ImLink className="ImLink" />
+        <ImLink className="linkIcon" />
+
         <a className="links" href={`${substack}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
+          <Substack alt="" width="20px" height="20px" className="linkIcon"/>
           SubStack: {title}
         </a>
       </h4>
@@ -77,8 +80,9 @@ function Parts() {
       </div>
 
       <h4 className="partsContent">
-        <ImLink className="ImLink" />
+        <ImLink className="linkIcon" />
         <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
+          <img src={Rumble} alt="" width="35px" height="25px" style={{ margin: "0px -3px 3px -8px" }}/>
           Rumble: {title}
         </a>
       </h4>
