@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, usePara
 import { seriesPartOne } from "./data"
 import Parts from "./pages/parts"
 import About from "./pages/about"
+import Summary from "./pages/summary"
 import Prussia from "./assets/prussiagate.jpeg"
 
 
@@ -58,9 +59,6 @@ function AppLayout() {
               <div style={headerStyle}>
                 <span> 
                   <code>
-      {/*              { expanded 
-                      ? "Prussia Gate" 
-                      : "T" }*/}
                     { expanded 
                       ? <div><img src={Prussia} alt="" style={{ marginRight: "10px" }} width="45px" height="55px"></img>Prussia Gate</div>
                       : <img src={Prussia} alt="" width="45px" height="55px" /> 
@@ -75,6 +73,7 @@ function AppLayout() {
                 <Sidenav.Body>
                   <Nav activeKey={activeKey} onSelect={setActiveKey} >
                     <Nav.Item as={Link} to='/' eventKey="1" >About</Nav.Item>
+                    <Nav.Item as={Link} to='/summary' eventKey="2">Summary</Nav.Item>
                     <hr />
                     <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
                       {Object.entries(seriesPartOne).map(([slug, { title }]) => {
@@ -98,6 +97,7 @@ function AppLayout() {
             <Content>
               <Routes>
                 <Route path="/" element={<About />}/>
+                <Route path="/summary" element={<Summary />}/>
                 <Route path=":slug" element={<Parts />}/>
               </Routes>
             </Content>

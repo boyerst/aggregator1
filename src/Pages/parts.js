@@ -54,12 +54,12 @@ function Parts() {
       </h4>
 
       <div>
-        {
+{/*        {
           // If iframeLoaded is false...
           iframeLoaded === false
             ?  <img src={Rumble2} alt=""/> 
             : ""
-        }
+        }*/}
          <iframe 
             src="https://prussiagate.substack.com/embed" 
             // src="https://www.youtube.com/embed/W8LlgS9YCP4?si=Dnwk-y-cq_bKWOha"
@@ -68,7 +68,8 @@ function Parts() {
             // onLoad={iframeLoad((event) => {})}
             // onLoad={event => iframeLoad(event)}
             // if iframeLoaded is false apply noiframe, else apply iframe
-            className={!iframeLoaded ? "noiframe" : "iframe"} 
+            // className={!iframeLoaded ? "noiframe" : "iframe"} 
+            scrolling="no"
             title="Substack embed"
             width="840" 
             height="260">
