@@ -87,7 +87,7 @@ function AppLayout() {
                     <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
                       {Object.entries(seriesPartOne).map(([slug, { title }]) => {
                         return (
-                          <Nav.Item as={Link} to={`${slug}`} key={slug} eventKey={slug} >
+                          <Nav.Item as={Link} to={`/parts/${slug}`} key={slug} eventKey={slug} >
                             {title}
                           </Nav.Item>
                         )
@@ -107,7 +107,7 @@ function AppLayout() {
               <Routes>
                 <Route path="/" element={<About />}/>
                 <Route path="/summary" element={<Summary />}/>
-                <Route path=":slug" element={<Parts />}/>
+                <Route path="/parts/:slug" element={<Parts />}/>
                 <Route path="*" element={<NoMatch />} />
               </Routes>
             </Content>
