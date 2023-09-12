@@ -102,9 +102,36 @@
   height: 18px;
 }
 
+.noMatch {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
 
 
+.noMatchHeader {
+  display: table-cell;
+  vertical-align: middle;
+}
 
+.noMatchHeader h2 {
+  font-size: 50px;
+  display: inline-block;
+  padding-right: 12px;
+  animation: type .5s alternate infinite;
+}
+
+.noMatchHeader p {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+@keyframes type{
+  from{box-shadow: inset -3px 0px 0px #888;}
+  to{box-shadow: inset -3px 0px 0px transparent;}
+}
 
 
 

@@ -1,5 +1,5 @@
 import './App.css'
-import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle, Animation } from 'rsuite'
+import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle, Animation, Button } from 'rsuite'
 import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
@@ -28,9 +28,12 @@ const headerStyle = {
 
 function NoMatch() {
   return (
-    <div style={{ padding: 20 }}>
-      <h2>404: Page Not Found</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+    <div className="noMatch">
+      <div className="noMatchHeader">      
+        <h2>404: Page Not Found</h2>
+        <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable</p>
+        <Button to="/" as={Link} appearance="ghost" active color="black"> Home </Button>
+      </div>
     </div>
   );
 }
