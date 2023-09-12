@@ -26,6 +26,15 @@ const headerStyle = {
 
 
 
+function NoMatch() {
+  return (
+    <div style={{ padding: 20 }}>
+      <h2>404: Page Not Found</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+    </div>
+  );
+}
+
 
 
 function AppLayout() {
@@ -99,6 +108,7 @@ function AppLayout() {
                 <Route path="/" element={<About />}/>
                 <Route path="/summary" element={<Summary />}/>
                 <Route path=":slug" element={<Parts />}/>
+                <Route path="*" element={<NoMatch />} />
               </Routes>
             </Content>
           </Container>

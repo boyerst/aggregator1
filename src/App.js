@@ -7,9 +7,6 @@ import AppLayout from './AppLayout'
 function App() {
 
   return (
-         // <code>App Name</code>
-
-
     <Router>
       <AppLayout />
     </Router>
