@@ -2,6 +2,7 @@
 
 .App {
 /*  text-align: center;*/
+  font: ;
 }
 
 
@@ -72,6 +73,15 @@
   margin: 90px 50px 50px 50px;
 }
 
+.aboutDiv {
+  margin: 100px 50px 50px 80px;
+}
+
+.aboutSummaryDiv {
+  text-align: center;
+  margin: 50px 0px 50px 0px;
+}
+
 .subLinks {
   display: block;
   text-align: center;
@@ -79,6 +89,7 @@
 
 .subLinks a {
   padding: 15px;
+ 
 }
 
 .iFrame {

@@ -32,7 +32,7 @@ function NoMatch() {
       <div className="noMatchHeader">      
         <h2>404: Page Not Found</h2>
         <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable</p>
-        <Button to="/" as={Link} appearance="ghost" active color="black"> Home </Button>
+        <Button to="/" as={Link} appearance="ghost" active> Home </Button>
       </div>
     </div>
   );

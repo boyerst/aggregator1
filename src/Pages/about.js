@@ -16,10 +16,10 @@ function About() {
 
 
   return (
-    <div style={{ margin: "100px 50px 50px 80px" }}>
+    <div className="aboutDiv">
       {/*<h4>About The "Prussia Gate" series, written by Will Zoll...</h4>*/}
       <h4>"Prussia Gate" is a continuing series written by Will Zoll & published on Substack</h4>
-      <div style={{textAlign: "center", marginTop: "50px", marginBottom: "50px"}}>
+      <div className="aboutSummaryDiv">
         <i>
           <h4>
             "An invisible hand sits behind humanity, exerting control over the human will.
@@ -40,9 +40,7 @@ function About() {
       </h4>
       {/*<iframe src="https://prussiagate.substack.com/embed" width="640" height="260" ></iframe>*/}
       <div className="subLinks">
-
         <a href="https://substack.com/@prussiagate" rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
-        
           <Substack alt="" width="60px" height="60px" />
         </a>
    {/*   </div>
