@@ -4,10 +4,11 @@ import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
 import { seriesPartOne } from "./data"
-import Parts from "./pages/parts"
+import Part from "./pages/parts"
 import About from "./pages/about"
 import Summary from "./pages/summary"
 import Prussia from "./assets/prussiagate.jpeg"
+import Footer from "./components/Footer"
 
 
 
@@ -47,8 +48,8 @@ function AppLayout() {
   const [expandSidenav, setExpandSidenav] = useState(true)
 
 
-  const { slug } = useParams()
-  console.log("slug: ", slug )
+  // const { slug } = useParams()
+  // console.log("slug: ", slug )
   // const part = seriesPartOne[slug]
   // console.log("part: ", part)
   console.log("activeKey: ", activeKey)
@@ -103,19 +104,20 @@ function AppLayout() {
             </Sidenav>
           </Sidebar>
           <Container >
-{/*            <Header>
-              <h2 className="header">Part Title or App Title?</h2>
-            </Header>*/}
+
             <Content>
               <Routes>
                 <Route path="/" element={<About />}/>
                 <Route path="/summary" element={<Summary />}/>
-                <Route path="/parts/:slug" element={<Parts />}/>
+                <Route path="/parts/:slug" element={<Part />}/>
                 <Route path="*" element={<NoMatch />} />
+
+
               </Routes>
             </Content>
           </Container>
         </Container>
+        <Footer />
       </div>
 
     </>

@@ -9,7 +9,7 @@ import { ReactComponent as Substack } from "../assets/substack-icon.svg"
 import { ImLink } from 'react-icons/im'
 
 
-function Parts() {
+function Part() {
 
   console.log("seriesPartOne in Parts.js: ", seriesPartOne)
   // console.log(location.pathname)
@@ -17,7 +17,9 @@ function Parts() {
 
   const { slug } = useParams()
   const part = seriesPartOne[slug]
-  console.log("part: ", part)
+  console.log("part in Parts.js: ", part)
+  console.log("slug in Parts.js: ", slug)
+
 
   const { title, rumble, substack } = part
 
@@ -39,7 +41,11 @@ function Parts() {
   }
 
 
+
+
+
   return (
+       
     <div className="partsDiv">
       <Header>
         <h2 className="header">{title}</h2>
@@ -55,6 +61,7 @@ function Parts() {
           SubStack: {title}
         </a>
       </h4>
+
 
       <div>
 {/*        {
@@ -88,9 +95,10 @@ function Parts() {
       </h4>
       <Iframe className="iFrame" src={rumble} width="840" height="472" allowfullscreen/>  
     </div>
+  
   )
 }
 
-export default Parts
+export default Part
 
 
