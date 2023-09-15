@@ -3,7 +3,7 @@ import { Container, Header, Content, Sidebar, Sidenav, Nav, Toggle, Animation, B
 import PageIcon from '@rsuite/icons/Page'
 import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route, Link, Outlet, Navigate, useParams, useNavigate, NavLink } from 'react-router-dom'
-import { notSince } from "./data"
+import { sectionOne, sectionThree } from "./data"
 import Part from "./pages/parts"
 import About from "./pages/about"
 import Summary from "./pages/summary"
@@ -88,8 +88,15 @@ function AppLayout() {
                     <Nav.Item as={Link} to='/' eventKey="1" >About</Nav.Item>
                     <Nav.Item as={Link} to='/summary' eventKey="2">Summary</Nav.Item>
                     <hr />
+                    {Object.entries(sectionOne).map(([slug, {title}]) => {
+                      return (
+                        <Nav.Item as={Link} to={`/parts/${slug}`} key={slug} eventKey={slug} >
+                          {title}
+                        </Nav.Item>
+                      )
+                    })}
                     <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
-                      {Object.entries(notSince).map(([slug, { title }]) => {
+                      {Object.entries(sectionThree).map(([slug, { title }]) => {
                         return (
                           <Nav.Item as={Link} to={`/parts/${slug}`} key={slug} eventKey={slug} >
                             {title}
