@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { Header} from 'rsuite'
 import "../App.css"
-import { sectionThree } from "../data"
+import { sectionOne, sectionThree } from "../data"
 import Iframe from 'react-iframe'
 import Rumble from "../assets/rumble.png"
 import { ReactComponent as Substack } from "../assets/substack-icon.svg"
@@ -16,7 +16,7 @@ function Part() {
 
 
   const { slug } = useParams()
-  const part = sectionThree[slug]
+  const part = sectionOne[slug] || sectionThree[slug]
   console.log("part in Parts.js: ", part)
   console.log("slug in Parts.js: ", slug)
 

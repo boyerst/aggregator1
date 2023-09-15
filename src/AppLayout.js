@@ -95,7 +95,7 @@ function AppLayout() {
                         </Nav.Item>
                       )
                     })}
-                    <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917" icon={<PageIcon />}>
+                    <Nav.Menu placement="rightStart" eventKey="1" title="Not Since 1917">
                       {Object.entries(sectionThree).map(([slug, { title }]) => {
                         return (
                           <Nav.Item as={Link} to={`/parts/${slug}`} key={slug} eventKey={slug} >
