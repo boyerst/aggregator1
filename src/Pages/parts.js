@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { Header} from 'rsuite'
 import "../App.css"
-import { seriesPartOne } from "../data"
+import { notSince } from "../data"
 import Iframe from 'react-iframe'
 import Rumble from "../assets/rumble.png"
 import { ReactComponent as Substack } from "../assets/substack-icon.svg"
@@ -11,12 +11,12 @@ import { ImLink } from 'react-icons/im'
 
 function Part() {
 
-  console.log("seriesPartOne in Parts.js: ", seriesPartOne)
+  console.log("notSince in Parts.js: ", notSince)
   // console.log(location.pathname)
 
 
   const { slug } = useParams()
-  const part = seriesPartOne[slug]
+  const part = notSince[slug]
   console.log("part in Parts.js: ", part)
   console.log("slug in Parts.js: ", slug)
 
