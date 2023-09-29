@@ -34,64 +34,63 @@ export const sectionOne ={
     // used in Parts.js
     rumble: "",
     // used in Parts.js
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/the-story"
   },
   "how-are-jfk-reagan-and-trump-different": {
     title: "How are JFK, Reagan, and Trump Different from the Rest?",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/how-are-jfk-reagan-and-trump-different"
   },
   "the-power-of-the-prussian-micropenis": {
     title: "The Power of the Prussian Micropenis",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/the-power-of-the-prussian-micropenis"
   },
   "prince-of-orange": {
     title: "Prince of Orange, Germany and World Domination",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/prince-of-orange-germany-and-world"
   },
   "1666": {
     title: "1666",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/1666"
   },
   "the-eye-of-providence": {
     title: "The Eye of Providence",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/the-eye-of-providence"
   },
   "prussian-religous-edict-of-1788": {
     title: "Prussian Religious Edict of 1788",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/prussian-religious-edict-of-1788"
   },
   "the-prussian-pontiff": {
     title: "The Prussian Pontiff",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/the-prussian-pontiff"
   },
   "saudi-arabia-prussia-wars-and-modern": {
     title: "Saudi Arabia, Prussia, Wars and Modern Banking",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/saudi-arabia-prussia-wars-and-modern"
   },
   "globalist-families-evidence-of-prussian": {
     title: "Globalist Families: Evidence of Prussian Control?",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/globalist-families-evidence-of-prussian"
   },
   "espionage": {
     title: "Espionage",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/espionage"
   },
   "could-we-be-subject-to-the-next-prussian": {
     title: "Could We Be Subject To The Next Prussian Deception?",
     rumble: "",
-    substack: ""
+    substack: "https://prussiagate.substack.com/p/could-we-be-subject-to-the-next-prussian"
   },
-
 }
 
 
