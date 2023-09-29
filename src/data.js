@@ -95,7 +95,26 @@ export const sectionOne ={
 
 
 
+export const sectionTwo = {
+  "marburg-the-four-horsemen-the-marburg": {
+      title: "Marburg: The Four Horsemen, the Marburg Files, Snow White and Revolution – A Prussian Dream",
+      // used in Parts.js
+      rumble: "",
+      // used in Parts.js
+      substack: "https://prussiagate.substack.com/p/marburg-the-four-horsemen-the-marburg"
+  },
+  "fairy-tale-anon-marburg-and-the-grimm": {
+      title: "Fairy-tale Anon: Marburg and the Grimm Tales of Child Abuse",
+      rumble: "",
+      substack: "https://prussiagate.substack.com/p/fairy-tale-anon-marburg-and-the-grimm"
+  },
+  "marburg-the-files": {
+      title: "Marburg Files, Prince Philip, Hitler and the Queen of England",
+      rumble: "",
+      substack: "https://prussiagate.substack.com/p/marburg-the-files"
+  },
 
+}
 
 
 
