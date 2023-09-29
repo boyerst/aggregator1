@@ -86,14 +86,24 @@ function Part() {
           </iframe>
       </div>
 
-      <h4 className="partsContent">
-        <ImLink className="linkIcon" />
-        <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
-          <img src={Rumble} alt="" width="35px" height="25px" style={{ margin: "0px -3px 3px -8px" }}/>
-          Rumble: {title}
-        </a>
-      </h4>
-      <Iframe className="iFrame" src={rumble} width="840" height="472" allowfullscreen/>  
+      {
+        rumble === null ? (
+          <div></div>
+        ) : (
+          <div>
+            <h4 className="partsContent">
+            <ImLink className="linkIcon" />
+            <a className="links" href={`${rumble}`} rel="noopener" rel="noreferrer" rel="nofollow" target="_blank">
+              <img src={Rumble} alt="" width="35px" height="25px" style={{ margin: "0px -3px 3px -8px" }}/>
+              Rumble: {title}
+            </a>
+          </h4>
+          <Iframe className="iFrame" src={rumble} width="840" height="472" allowfullscreen/>  
+        </div>
+      )}
+
+
+
     </div>
   
   )
